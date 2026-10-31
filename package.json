@@ -1,0 +1,17 @@
+{
+  "name": "get-indexed",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Submit a site's new and changed URLs to search engines that have an API, and list the rest for a person",
+  "license": "MIT",
+  "bin": {
+    "get-indexed": "scripts/get-indexed.mjs"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

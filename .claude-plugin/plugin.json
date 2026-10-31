@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "get-indexed",
+  "version": "0.1.0",
+  "description": "Submits a site's new and changed pages to IndexNow and Google Search Console, checks Google's index status, and lists the steps that need a person.",
+  "author": {
+    "name": "Abdul Rahman P Z",
+    "url": "https://github.com/arm-pz"
+  },
+  "homepage": "https://skillsmith.tech/get-indexed/",
+  "repository": "https://github.com/arm-pz/get-indexed",
+  "keywords": ["seo", "indexnow", "search-console", "indexing", "agent-skills"]
+}
