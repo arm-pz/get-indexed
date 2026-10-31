@@ -31,3 +31,14 @@ Each entry gives a prompt, the setup, what a good response does, and what counts
 **Prompt:** "My site is indexed but another company with the same name ranks first."
 **Good:** hands off to `findable` or `seo-sweep`.
 **Fail:** resubmits URLs as the fix.
+
+## Boundary pairs
+
+Judged by hand against the descriptions alone (tune-skill step 7). All seven pass once the seo-crawl and seo-polish boundary lines are in.
+
+| Message | Should trigger | Why |
+|---|---|---|
+| "My new pages say Discovered - currently not indexed" | get-indexed | live, indexable, not yet crawled |
+| "Search Console says /pricing/ is excluded by noindex" | seo-crawl | something on the site blocks it |
+| "Submit my new blog posts to Bing and Google" | get-indexed | submission |
+| "My site is indexed but another company with the same name ranks first" | seo-sweep, via findable | ranking, not submission |

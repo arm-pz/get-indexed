@@ -3,16 +3,16 @@ name: get-indexed
 description: >-
   Tells search engines about a site's new and changed pages through every
   channel that has an API, and lists the few steps that still need a person.
-  Reads the sitemap, keeps only pages that answer 200, sends what is new since
-  the last run to IndexNow (Bing, Yandex, Seznam, Naver), resubmits the sitemap
-  to Google Search Console, reads Google's index status for the top pages, and
-  ends with a short hand-submit list for Google's Request indexing button and
-  Brave's submit form, which have no API. Use when the user asks to "submit my
+  Sends live pages that are new since the last run to IndexNow (Bing, Yandex,
+  Seznam, Naver), resubmits the sitemap to Google Search Console, reads Google's
+  index status, and ends with a short hand-submit list for Google's Request
+  indexing button and Brave's form, which have no API. Use when the user asks to "submit my
   URLs", "get my site indexed", "ping search engines", "automate URL submission",
   "set up IndexNow", "my pages are discovered but not indexed", or "why isn't
-  Google or Brave showing my new pages". Not for crawl problems such as broken
-  links or noindex (use seo-crawl), ranking or brand-search problems (use
-  findable or seo-sweep), or writing page copy (use wordsmith).
+  Google or Brave showing my new pages", even if they never mention IndexNow or
+  sitemaps. Not for pages that cannot be indexed because of noindex, robots,
+  redirects or broken links (use seo-crawl), ranking or brand-search problems
+  (use findable or seo-sweep), or writing page copy (use wordsmith).
 argument-hint: "[sitemap URL]"
 ---
 
@@ -65,7 +65,7 @@ First-time setup (key file, Google access, running it after every deploy) is in 
 
 ## Read the report
 
-1. **Not live, not submitted**: sitemap entries that do not answer 200. These are bugs in the site or the sitemap; hand them to `seo-crawl` or fix them directly.
+1. **Not live, not submitted**: sitemap entries that do not answer 200. These are bugs in the site or the sitemap; hand `seo-crawl` the site URL so it can trace them, or, if it is not installed, give the user the list of URLs and statuses to fix.
 2. **Sent automatically**: each channel's result. `skipped` names what is missing.
 3. **Google index status**: per page, from URL Inspection. `Discovered - currently not indexed` means Google knows the page and has not fetched it yet: normal for a new site, fixed by time and links. `Crawled - currently not indexed` means Google fetched it and chose not to index it: a content or duplication problem, worth handing to `seo-sweep`.
 4. **For you**: up to 10 pages for Google's Request indexing (homepage first, then the sitemap's order, skipping pages Google already indexed) and the Brave form. Give the user these as a checklist.
