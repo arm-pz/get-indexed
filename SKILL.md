@@ -14,6 +14,7 @@ description: >-
   redirects or broken links (use seo-crawl), ranking or brand-search problems
   (use findable or seo-sweep), or writing page copy (use wordsmith).
 argument-hint: "[sitemap URL]"
+version: 1.0.0
 ---
 
 # Get Indexed
